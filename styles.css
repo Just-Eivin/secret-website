@@ -2,6 +2,7 @@
 
 :root {
     --main-color: #f79762;
+    --secondary-color: #fdd2b9;
 }
 
 *{
@@ -14,6 +15,7 @@
 html {
     overflow: hidden;
     font-size: 12px;
+    background-color:#f8e3d7;
 }
 
 .content {
@@ -23,23 +25,44 @@ html {
 .section-form {
     width: 59vw;
     text-align: center;
-    box-shadow: -1px 0px 5px rgba(0, 0, 0, 0.74);
+    box-shadow: -1px 0px 5px rgba(0, 0, 0, 0.75);
+    border-left: 3px solid var(--main-color);
+    border-right: 3px solid var(--main-color);
 }
 
 span {
-    background-color: #fdd2b9;
+    background-color: var(--secondary-color);
     padding: 0 5rem;
-    border: 3px solid var(--main-color);
     border-radius: 10px;
+    position: relative;
+    top: 12.5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.125);
 }
 
 .line {
     position: relative;
     z-index: -1;
     width: 100%;
-    height: 25px;
-    background-color: #f79762;
+    height: 100px;
+    background-color: var(--main-color);
     top: -12.5px;
+}
+
+h2 {
+    position: relative;
+    top: 12.5px;
+}
+
+.line-2 {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 50px;
+    background-color: var(--secondary-color);
+    top: -12.5px;
+    margin-bottom: 50px;
+    border-bottom: 3px solid var(--main-color);
+
 }
 
 .picture {
@@ -59,9 +82,9 @@ h1 {
 h2 {
     color: var(--main-color);
     font-size: 1.8rem;
-    font-weight: 500;
     letter-spacing: 0.2rem;
     margin-bottom: 100px;
+    font-weight: bold;
 }
 
 h3 {
@@ -71,3 +94,222 @@ h3 {
     color: var(--main-color);
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.250);
 }
+
+#form-div {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 850px;
+    color: var(--main-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+ul {
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    border: 1px solid var(--main-color);
+}
+
+legend {
+    color: var(--main-color);
+}
+
+fieldset {
+    border: 2px solid var(--main-color);
+    padding-bottom: 10px;
+
+}
+
+button {
+    border: 3px solid var(--main-color);
+    color: var(--main-color);
+    font-weight: bold;
+    border-radius: 25px;
+    width: 250px;
+    height: 50px;
+    font-size: 2rem;
+}
+
+button:hover {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    transition: 0.2s;
+}
+
+button:focus {
+    border: 4px solid var(--secondary-color);
+    transition: 0.2s;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    color: var(--main-color);
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+  }
+  
+  input[type="radio"]::before {
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--main-color);
+    background-color: var(--main-color);
+  }
+  
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+
+  input[type="radio"]:checked {
+    background-color: var(--main-color);
+    transition: 0.4s;
+  }
+  
+  input[type="radio"]:focus {
+    outline: max(2px, 0.15em) solid var(--main-color);
+    outline-offset: max(2px, 0.15em);
+  }
+
+
+  label {
+    padding-bottom: 0px;
+    margin-bottom: 0;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  input[type="tel"]:focus,
+  select:focus,
+  input[type="date"]:focus  {
+    outline: none !important;
+    border: 3px solid var(--main-color);
+    transition: 0.1s;
+    font-weight: bold;
+ 
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  select,
+  input[type="date"]  {
+    color: var(--main-color);
+    padding: 0px 5px;
+  }
+
+  input[type="password"]  {
+    font-weight: bold;
+  }
+
+  input[type="password"]:focus  {
+    font-weight: bolder;
+  }
+
+  select {
+    border: 1px solid var(--main-color);
+    -webkit-appearance: none;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: -25px;
+  }
+
+  .gender-div {
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    padding-top: 0;
+    overflow: hidden;
+    width: 350px;
+  }
+
+ 
+
+  .gender-div legend {
+    background-color: var(--secondary-color);
+    border-bottom: 2px solid var(--main-color);
+  }
+
+  .gender-div p {
+    margin-bottom: 5px;
+  }
+
+  input[type="radio"] {
+    margin-top: 10px;
+  }
+
+  .legend {
+    border: 2px solid var(--main-color);
+    padding: 0px 8px;
+    background-color: var(--secondary-color);
+  }
+
+  fieldset {
+    padding-top: 10px;
+    background-color: rgb(253, 242, 235);
+    padding-bottom: 15px;
+  }
+
+  .special {
+    margin-top: 25px;
+    width: 650px;
+  }
+
+  .centrify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    margin: 10px;
+  }
+
+  h3 {
+    border: 3px solid var(--main-color);
+    border-right: 0;
+    border-left: 0;
+    background-color: var(--secondary-color);
+    font-weight: 800;
+  }
+
+  .line-3 {
+    height: 40px;
+    width: 100%;
+    background-color: var(--main-color);
+    position: relative;
+    top: 60px;
+  }
+
+  .cpdrei {
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
